@@ -17,6 +17,7 @@ import 'package:swish_basketball/view/home/parenthomescreen.dart';
 import 'package:swish_basketball/view/kids/kidsactivityanalytics.dart';
 import 'package:swish_basketball/view/kids/kidshomescreen.dart';
 import 'package:swish_basketball/view/kids/kidshotchart.dart';
+import 'package:swish_basketball/view/paymentmethod/paymentmethod.dart';
 import 'package:swish_basketball/view/setting/setting.dart';
 import 'package:swish_basketball/view/video/swichvideolibrary.dart';
 import 'package:swish_basketball/view/video/videolibrary.dart';

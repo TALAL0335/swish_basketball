@@ -9,6 +9,7 @@ import 'package:swish_basketball/view/auth/login.dart';
 import 'package:swish_basketball/view/auth/otp.dart';
 import 'package:swish_basketball/view/auth/payment.dart';
 import 'package:swish_basketball/view/auth/register.dart';
+import 'package:swish_basketball/view/auth/splash.dart';
 import 'package:swish_basketball/view/community/addcommunity.dart';
 import 'package:swish_basketball/view/goals/activityanalytics.dart';
 import 'package:swish_basketball/view/goals/congratulation.dart';
@@ -27,9 +28,9 @@ import 'package:swish_basketball/view/kids/kidshomescreen.dart';
 import 'package:swish_basketball/view/kids/kidshotchart.dart';
 import 'package:swish_basketball/view/mainhome/mainhome.dart';
 import 'package:swish_basketball/view/notifications/notification.dart';
-import 'package:swish_basketball/view/paymentmethod/dave.dart';
+import 'package:swish_basketball/view/paymentmethod/analytics1.dart';
 import 'package:swish_basketball/view/paymentmethod/inviteuser.dart';
-import 'package:swish_basketball/view/paymentmethod/mikeottrando.dart';
+import 'package:swish_basketball/view/paymentmethod/analytics.dart';
 import 'package:swish_basketball/view/paymentmethod/paymentmethod.dart';
 
 import 'package:swish_basketball/view/setting/account.dart';
@@ -136,6 +137,24 @@ final GoRouter _router = GoRouter(
             },
           ),
           GoRoute(
+            path: 'HomeScreen',
+            builder: (BuildContext context, GoRouterState state) {
+              return const HomeScreen();
+            },
+          ),
+          GoRoute(
+            path: 'daveottrando',
+            builder: (BuildContext context, GoRouterState state) {
+              return const daveottrando();
+            },
+          ),
+          GoRoute(
+            path: 'mikeottrando',
+            builder: (BuildContext context, GoRouterState state) {
+              return const mikeottrando();
+            },
+          ),
+          GoRoute(
             path: 'freethrow',
             builder: (BuildContext context, GoRouterState state) {
               return const freethrow();
@@ -160,15 +179,63 @@ final GoRouter _router = GoRouter(
             },
           ),
           GoRoute(
+            path: 'downloadscreen',
+            builder: (BuildContext context, GoRouterState state) {
+              return const downloadscreen();
+            },
+          ),
+          GoRoute(
             path: 'yearScoreAnalytics',
             builder: (BuildContext context, GoRouterState state) {
               return const yearScoreAnalytics();
             },
           ),
           GoRoute(
+            path: 'activityanalytic',
+            builder: (BuildContext context, GoRouterState state) {
+              return const activityanalytic();
+            },
+          ),
+          GoRoute(
+            path: 'shortchart',
+            builder: (BuildContext context, GoRouterState state) {
+              return const shortchart();
+            },
+          ),
+          GoRoute(
+            path: 'splashscreen',
+            builder: (BuildContext context, GoRouterState state) {
+              return const splashscreen();
+            },
+          ),
+          GoRoute(
+            path: 'kidactivityanalytics',
+            builder: (BuildContext context, GoRouterState state) {
+              return const kidactivityanalytics();
+            },
+          ),
+          GoRoute(
+            path: 'kidshotchart',
+            builder: (BuildContext context, GoRouterState state) {
+              return const kidshotchart();
+            },
+          ),
+          GoRoute(
+            path: 'congratulationscreen',
+            builder: (BuildContext context, GoRouterState state) {
+              return const congratulationscreen();
+            },
+          ),
+          GoRoute(
             path: 'NoitifcationScreen',
             builder: (BuildContext context, GoRouterState state) {
               return const NoitifcationScreen();
+            },
+          ),
+          GoRoute(
+            path: 'ChildHomeScreen',
+            builder: (BuildContext context, GoRouterState state) {
+              return const ChildHomeScreen();
             },
           ),
           GoRoute(
@@ -195,12 +262,12 @@ final GoRouter _router = GoRouter(
                     return const CriteriaSelectionScreen();
                   },
                 ),
-                GoRoute(
-                  path: 'throwandspot',
-                  builder: (BuildContext context, GoRouterState state) {
-                    return const ThrowAndSpotSelectionScreen();
-                  },
-                ),
+                // GoRoute(
+                //   path: 'throwandspot',
+                //   builder: (BuildContext context, GoRouterState state) {
+                //     return const ThrowAndSpotSelectionScreen();
+                //   },
+                // ),
                 GoRoute(
                   path: 'matchresult',
                   builder: (BuildContext context, GoRouterState state) {
@@ -237,6 +304,12 @@ final GoRouter _router = GoRouter(
           path: 'otp',
           builder: (BuildContext context, GoRouterState state) {
             return const OtpScreen();
+          },
+        ),
+        GoRoute(
+          path: 'splashscreen',
+          builder: (BuildContext context, GoRouterState state) {
+            return const splashscreen();
           },
         ),
         GoRoute(

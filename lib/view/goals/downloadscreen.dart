@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:swish_basketball/view/mainhome/mainhome.dart';
 
@@ -13,7 +14,11 @@ class downloadscreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        leading: Icon(LucideIcons.arrowLeft, color: Color(0xffEE7A1D)),
+        leading: GestureDetector(
+            onTap: () {
+              context.pop();
+            },
+            child: Icon(LucideIcons.arrowLeft, color: Color(0xffEE7A1D))),
         title: Text(
           "Downloads",
           style: TextStyle(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:swish_basketball/view/home/childhomescreen.dart';
 
@@ -14,9 +15,14 @@ class daveottrando extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: Icon(
-          LucideIcons.arrowLeft,
-          color: Color(0xffEE7A1D),
+        leading: GestureDetector(
+          onTap: () {
+            context.push('/home/child/noitification');
+          },
+          child: Icon(
+            LucideIcons.arrowLeft,
+            color: Color(0xffEE7A1D),
+          ),
         ),
         title: Text(
           "Analytics",
@@ -37,26 +43,31 @@ class daveottrando extends StatelessWidget {
         child: Column(
           children: [
             21.verticalSpace,
-            SizedBox(
-              width: 353.w,
-              height: 60.h,
-              child: GreyBG(
-                child: ListTile(
-                  leading: Image.asset(
-                    "assets/images/childph.png",
-                    width: 40.w,
-                    height: 40.h,
-                  ),
-                  title: Text(
-                    "Mike Ottrando",
-                    style: TextStyle(
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xffEE7A1D)),
-                  ),
-                  trailing: Icon(
-                    LucideIcons.chevronDown,
-                    color: Color(0xffEE7A1D),
+            GestureDetector(
+              onTap: () {
+                context.push('/home/child/mikeottrando');
+              },
+              child: SizedBox(
+                width: 353.w,
+                height: 60.h,
+                child: GreyBG(
+                  child: ListTile(
+                    leading: Image.asset(
+                      "assets/images/childph.png",
+                      width: 40.w,
+                      height: 40.h,
+                    ),
+                    title: Text(
+                      "Mike Ottrando",
+                      style: TextStyle(
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xffEE7A1D)),
+                    ),
+                    trailing: Icon(
+                      LucideIcons.chevronDown,
+                      color: Color(0xffEE7A1D),
+                    ),
                   ),
                 ),
               ),

@@ -195,12 +195,17 @@ class _CreateYourGoalsState extends State<CreateYourGoals> {
               ),
             ),
             26.verticalSpace,
-            SizedBox(
-                width: 326.w,
-                child: const GlobalButton(
-                  color: Color(0xffEE7A1D),
-                  text: 'Create your Goal',
-                ))
+            GestureDetector(
+              onTap: () {
+                context.push('/home/child/congratulationscreen');
+              },
+              child: SizedBox(
+                  width: 326.w,
+                  child: const GlobalButton(
+                    color: Color(0xffEE7A1D),
+                    text: 'Create your Goal',
+                  )),
+            )
           ],
         ),
       ),

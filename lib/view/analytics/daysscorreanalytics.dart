@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:swish_basketball/widgets/button.dart';
 import 'package:swish_basketball/widgets/dropdown.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
+// import 'package:syncfusion_flutter_charts/charts.dart';
 
 class dayScoreAnalytics extends StatefulWidget {
   const dayScoreAnalytics({super.key});
@@ -16,7 +16,7 @@ class _ScoreAnalyticsState extends State<dayScoreAnalytics> {
   int touchedIndex = -1;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   late List<_ChartData> data;
-  late TooltipBehavior _tooltip;
+  // late TooltipBehavior _tooltip;
 
   @override
   void initState() {
@@ -34,8 +34,8 @@ class _ScoreAnalyticsState extends State<dayScoreAnalytics> {
       // _ChartData('Oct', 40),
       // _ChartData('Nov', 30)
     ];
-    _tooltip = TooltipBehavior(enable: true);
-    super.initState();
+    // _tooltip = TooltipBehavior(enable: true);
+    // super.initState();
   }
 
   @override
@@ -136,7 +136,7 @@ class _ScoreAnalyticsState extends State<dayScoreAnalytics> {
                             child: Text(
                               "Week",
                               style: TextStyle(
-                                  color: const Color(0xffEE7A1D),
+                                  color: const Color(0xff7C8396),
                                   fontSize: 14.sp,
                                   fontWeight: FontWeight.bold),
                             ),
@@ -164,7 +164,6 @@ class _ScoreAnalyticsState extends State<dayScoreAnalytics> {
                             ),
                           ),
                           10.verticalSpace,
-                          Image.asset("assets/images/button.png")
                         ],
                       ),
                       10.verticalSpace,

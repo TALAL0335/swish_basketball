@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:swish_basketball/widgets/skillscard.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
+// import 'package:syncfusion_flutter_charts/charts.dart';
 import '';
 
 class ChildHomeScreen extends StatefulWidget {
@@ -20,7 +20,7 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
   int touchedIndex = -1;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   late List<_ChartData> data;
-  late TooltipBehavior _tooltip;
+  // late TooltipBehavior _tooltip;
 
   @override
   void initState() {
@@ -38,8 +38,8 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
       _ChartData('Oct', 40),
       _ChartData('Nov', 30)
     ];
-    _tooltip = TooltipBehavior(enable: true);
-    super.initState();
+    // _tooltip = TooltipBehavior(enable: true);
+    // super.initState();
   }
 
   bool switchValue = true;
@@ -385,7 +385,11 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                                   fontSize: 14.sp),
                             ),
                           ),
-                          Image.asset("assets/images/button.png")
+                          GestureDetector(
+                              onTap: () {
+                                context.push('/home/child/shortchart');
+                              },
+                              child: Image.asset("assets/images/button1.png"))
                         ],
                       ),
                       10.verticalSpace,
@@ -395,38 +399,43 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                 ),
               ),
               10.verticalSpace,
-              Container(
-                width: 353.w,
-                height: 148.h,
-                decoration: BoxDecoration(
-                  color: Color(0xFF000000), // Black background color
-                  border: Border.all(
-                    color: Color(0xFFECEDEF),
-                    width: 1,
+              GestureDetector(
+                onTap: () {
+                  context.push('/home/child/activityanalytic');
+                },
+                child: Container(
+                  width: 353.w,
+                  height: 148.h,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF000000), // Black background color
+                    border: Border.all(
+                      color: Color(0xFFECEDEF),
+                      width: 1,
+                    ),
+                    borderRadius: BorderRadius.circular(13),
                   ),
-                  borderRadius: BorderRadius.circular(13),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Row(
-                    children: [
-                      SizedBox(
-                          width: 113.w,
-                          height: 113.h,
-                          child: Image.asset("assets/images/activity2.png")),
-                      24.horizontalSpace,
-                      SizedBox(
-                        width: 167.w,
-                        height: 27.h,
-                        child: Text(
-                          "Activity Analytics",
-                          style: TextStyle(
-                              fontSize: 18.sp,
-                              fontWeight: FontWeight.w400,
-                              color: Color(0xffFFFFFF)),
-                        ),
-                      )
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                            width: 113.w,
+                            height: 113.h,
+                            child: Image.asset("assets/images/activity2.png")),
+                        24.horizontalSpace,
+                        SizedBox(
+                          width: 167.w,
+                          height: 27.h,
+                          child: Text(
+                            "Activity Analytics",
+                            style: TextStyle(
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.w400,
+                                color: Color(0xffFFFFFF)),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -466,28 +475,33 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                 ),
               ),
               22.verticalSpace,
-              SizedBox(
-                width: 360.w,
-                height: 65.h,
-                child: GreyBG(
-                  child: Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Row(
-                      children: [
-                        Icon(
-                          LucideIcons.bookDown,
-                          size: 18.h,
-                          color: Color(0xffEE7A1D),
-                        ),
-                        10.horizontalSpace,
-                        Text(
-                          "Download Built-in-Guide",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 18.sp,
-                              color: Color(0xffEE7A1D)),
-                        ),
-                      ],
+              GestureDetector(
+                onTap: () {
+                  context.push('/home/child/downloadscreen');
+                },
+                child: SizedBox(
+                  width: 360.w,
+                  height: 65.h,
+                  child: GreyBG(
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Row(
+                        children: [
+                          Icon(
+                            LucideIcons.bookDown,
+                            size: 18.h,
+                            color: Color(0xffEE7A1D),
+                          ),
+                          10.horizontalSpace,
+                          Text(
+                            "Download Built-in-Guide",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 18.sp,
+                                color: Color(0xffEE7A1D)),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

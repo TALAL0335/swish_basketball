@@ -128,10 +128,15 @@ class _paymentmethodState extends State<paymentmethod> {
                       ],
                     ),
                     50.verticalSpace,
-                    SizedBox(
-                      width: 348.w,
-                      child: GlobalButton(
-                          text: "Pay Now", color: Color(0xffEE7A1D)),
+                    GestureDetector(
+                      onTap: () {
+                        context.push('/home/child/HomeScreen');
+                      },
+                      child: SizedBox(
+                        width: 348.w,
+                        child: GlobalButton(
+                            text: "Pay Now", color: Color(0xffEE7A1D)),
+                      ),
                     )
                   ],
                 ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:swish_basketball/widgets/button.dart';
 
@@ -29,10 +30,15 @@ class congratulationscreen extends StatelessWidget {
               child: Image.asset("assets/images/Congratulations.png"),
             ),
             25.verticalSpace,
-            SizedBox(
-              width: 331.w,
-              child:
-                  GlobalButton(text: "Back to Home", color: Color(0xffEE7A1D)),
+            GestureDetector(
+              onTap: () {
+                context.push('/home/child/ChildHomeScreen');
+              },
+              child: SizedBox(
+                width: 331.w,
+                child: GlobalButton(
+                    text: "Back to Home", color: Color(0xffEE7A1D)),
+              ),
             )
           ],
         ),

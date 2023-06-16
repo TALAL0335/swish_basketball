@@ -82,96 +82,111 @@ class _shortchartState extends State<shortchart> {
                 ),
               ),
               22.verticalSpace,
-              SizedBox(
-                width: 353.w,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      width: 93.w,
-                      height: 86.h,
-                      child: GreyBG(
-                          child: Center(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "431",
-                              style: TextStyle(
-                                  color: const Color(0xff649E24),
-                                  fontSize: 27.sp,
-                                  fontWeight: FontWeight.bold),
+              GestureDetector(
+                onTap: () {
+                  context.push('/home/child/shotsatempt');
+                },
+                child: SizedBox(
+                  width: 353.w,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 93.w,
+                        height: 86.h,
+                        child: GreyBG(
+                            child: Center(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "431",
+                                style: TextStyle(
+                                    color: const Color(0xff649E24),
+                                    fontSize: 27.sp,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              7.verticalSpace,
+                              Text(
+                                "Total Shots",
+                                style: TextStyle(
+                                    color: const Color(0xff273251),
+                                    fontSize: 9.sp,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        )),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          context.push('/home/child/workoutscreen');
+                        },
+                        child: SizedBox(
+                          width: 145.w,
+                          height: 86.h,
+                          child: GreyBG(
+                              child: Center(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "54.2h",
+                                  style: TextStyle(
+                                      color: const Color(0xff5484FF),
+                                      fontSize: 27.sp,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                7.verticalSpace,
+                                Text(
+                                  "Total Workout Time",
+                                  style: TextStyle(
+                                      color: const Color(0xff273251),
+                                      fontSize: 9.sp,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
                             ),
-                            7.verticalSpace,
-                            Text(
-                              "Total Shots",
-                              style: TextStyle(
-                                  color: const Color(0xff273251),
-                                  fontSize: 9.sp,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
+                          )),
                         ),
-                      )),
-                    ),
-                    SizedBox(
-                      width: 145.w,
-                      height: 86.h,
-                      child: GreyBG(
-                          child: Center(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "54.2h",
-                              style: TextStyle(
-                                  color: const Color(0xff5484FF),
-                                  fontSize: 27.sp,
-                                  fontWeight: FontWeight.bold),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          context.push('/home/child/freethrow');
+                        },
+                        child: SizedBox(
+                          width: 93.w,
+                          height: 86.h,
+                          child: GreyBG(
+                              child: Center(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "82%",
+                                  style: TextStyle(
+                                      color: const Color(0xffEE7A1D),
+                                      fontSize: 27.sp,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                7.verticalSpace,
+                                Text(
+                                  "Free Throw",
+                                  style: TextStyle(
+                                      color: const Color(0xff273251),
+                                      fontSize: 9.sp,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
                             ),
-                            7.verticalSpace,
-                            Text(
-                              "Total Workout Time",
-                              style: TextStyle(
-                                  color: const Color(0xff273251),
-                                  fontSize: 9.sp,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
+                          )),
                         ),
-                      )),
-                    ),
-                    SizedBox(
-                      width: 93.w,
-                      height: 86.h,
-                      child: GreyBG(
-                          child: Center(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "82%",
-                              style: TextStyle(
-                                  color: const Color(0xffEE7A1D),
-                                  fontSize: 27.sp,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            7.verticalSpace,
-                            Text(
-                              "Free Throw",
-                              style: TextStyle(
-                                  color: const Color(0xff273251),
-                                  fontSize: 9.sp,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      )),
-                    ),
-                  ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
               25.verticalSpace,
@@ -193,32 +208,56 @@ class _shortchartState extends State<shortchart> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Text(
-                            "Day",
-                            style: TextStyle(
-                                color: const Color(0xff7C8396),
-                                fontSize: 14.sp),
+                          GestureDetector(
+                            onTap: () {
+                              context.push('/home/child/dayScoreAnalytics');
+                            },
+                            child: Text(
+                              "Day",
+                              style: TextStyle(
+                                  color: const Color(0xff7C8396),
+                                  fontSize: 14.sp),
+                            ),
                           ),
-                          Text(
-                            "Week",
-                            style: TextStyle(
-                                color: const Color(0xffEE7A1D),
-                                fontSize: 14.sp,
-                                fontWeight: FontWeight.bold),
+                          GestureDetector(
+                            onTap: () {
+                              context.push('/home/child/ScoreAnalytics');
+                            },
+                            child: Text(
+                              "Week",
+                              style: TextStyle(
+                                  color: const Color(0xffEE7A1D),
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
-                          Text(
-                            "Month",
-                            style: TextStyle(
-                                color: const Color(0xff7C8396),
-                                fontSize: 14.sp),
+                          GestureDetector(
+                            onTap: () {
+                              context.push('/home/child/monthScoreAnalytics');
+                            },
+                            child: Text(
+                              "Month",
+                              style: TextStyle(
+                                  color: const Color(0xff7C8396),
+                                  fontSize: 14.sp),
+                            ),
                           ),
-                          Text(
-                            "Year",
-                            style: TextStyle(
-                                color: const Color(0xff7C8396),
-                                fontSize: 14.sp),
+                          GestureDetector(
+                            onTap: () {
+                              context.push('/home/child/yearScoreAnalytics');
+                            },
+                            child: Text(
+                              "Year",
+                              style: TextStyle(
+                                  color: const Color(0xff7C8396),
+                                  fontSize: 14.sp),
+                            ),
                           ),
-                          Image.asset("assets/images/button.png")
+                          GestureDetector(
+                              onTap: () {
+                                context.push('/home/child/ChildHomeScreen');
+                              },
+                              child: Image.asset("assets/images/button.png"))
                           // CupertinoSwitch(
                           //   thumbColor: Color(0xffFF4A31),
 
@@ -247,38 +286,43 @@ class _shortchartState extends State<shortchart> {
                 ),
               ),
               22.verticalSpace,
-              Container(
-                width: 353.w,
-                height: 148.h,
-                decoration: BoxDecoration(
-                  color: Color(0xFF000000), // Black background color
-                  border: Border.all(
-                    color: Color(0xFFECEDEF),
-                    width: 1,
+              GestureDetector(
+                onTap: () {
+                  context.push('/home/child/activityanalytic');
+                },
+                child: Container(
+                  width: 353.w,
+                  height: 148.h,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF000000), // Black background color
+                    border: Border.all(
+                      color: Color(0xFFECEDEF),
+                      width: 1,
+                    ),
+                    borderRadius: BorderRadius.circular(13),
                   ),
-                  borderRadius: BorderRadius.circular(13),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Row(
-                    children: [
-                      SizedBox(
-                          width: 113.w,
-                          height: 113.h,
-                          child: Image.asset("assets/images/activity2.png")),
-                      24.horizontalSpace,
-                      SizedBox(
-                        width: 167.w,
-                        height: 27.h,
-                        child: Text(
-                          "Activity Analytics",
-                          style: TextStyle(
-                              fontSize: 18.sp,
-                              fontWeight: FontWeight.w400,
-                              color: Color(0xffFFFFFF)),
-                        ),
-                      )
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                            width: 113.w,
+                            height: 113.h,
+                            child: Image.asset("assets/images/activity2.png")),
+                        24.horizontalSpace,
+                        SizedBox(
+                          width: 167.w,
+                          height: 27.h,
+                          child: Text(
+                            "Activity Analytics",
+                            style: TextStyle(
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.w400,
+                                color: Color(0xffFFFFFF)),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -317,33 +361,33 @@ class _shortchartState extends State<shortchart> {
                 ),
               ),
               22.verticalSpace,
-              SizedBox(
-                width: 360.w,
-                height: 65.h,
-                child: GreyBG(
-                  child: Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Row(
-                      children: [
-                        Icon(
-                          LucideIcons.bookDown,
-                          size: 18.h,
-                          color: Color(0xffEE7A1D),
-                        ),
-                        10.horizontalSpace,
-                        GestureDetector(
-                          onTap: () {
-                            context.push('/home/child/download');
-                          },
-                          child: Text(
+              GestureDetector(
+                onTap: () {
+                  context.push('/home/child/downloadscreen');
+                },
+                child: SizedBox(
+                  width: 360.w,
+                  height: 65.h,
+                  child: GreyBG(
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Row(
+                        children: [
+                          Icon(
+                            LucideIcons.bookDown,
+                            size: 18.h,
+                            color: Color(0xffEE7A1D),
+                          ),
+                          10.horizontalSpace,
+                          Text(
                             "Download Built-in-Guide",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 18.sp,
                                 color: Color(0xffEE7A1D)),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
