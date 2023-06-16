@@ -262,12 +262,12 @@ final GoRouter _router = GoRouter(
                     return const CriteriaSelectionScreen();
                   },
                 ),
-                // GoRoute(
-                //   path: 'throwandspot',
-                //   builder: (BuildContext context, GoRouterState state) {
-                //     return const ThrowAndSpotSelectionScreen();
-                //   },
-                // ),
+                GoRoute(
+                  path: 'throwandspot',
+                  builder: (BuildContext context, GoRouterState state) {
+                    return const ThrowAndSpotSelectionScreen();
+                  },
+                ),
                 GoRoute(
                   path: 'matchresult',
                   builder: (BuildContext context, GoRouterState state) {

@@ -44,6 +44,9 @@ class CriteriaSelectionScreen extends StatelessWidget {
                         translation: const Offset(0.0, 0.05),
                         child: Image.asset(
                           'assets/images/player.png',
+                          width: 402.w,
+                          height: 284.h,
+                          fit: BoxFit.cover,
                         ))
                   ],
                 ),
